@@ -12,7 +12,6 @@ import {
   Tooltip,
 } from "antd";
 import {
-  PlusOutlined,
   DownloadOutlined,
   AppstoreOutlined,
   BarsOutlined,
@@ -43,7 +42,6 @@ interface SupplierHeaderProps {
   onChangeStatus: (s: SupplierStatus) => void;
   onChangeView: (v: ViewMode) => void;
   onExport: () => void;
-  onCreate: () => void;
 }
 
 export default function SupplierHeader({
@@ -55,7 +53,6 @@ export default function SupplierHeader({
   onChangeStatus,
   onChangeView,
   onExport,
-  onCreate,
 }: SupplierHeaderProps) {
   return (
     <Space direction="vertical" size={16} style={{ width: "100%" }}>

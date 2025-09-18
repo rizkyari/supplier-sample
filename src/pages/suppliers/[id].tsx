@@ -16,8 +16,9 @@ export default function SupplierDetail({ id }: Props) {
                 children: (
                     <Descriptions bordered column={1} size="small">
                     <Descriptions.Item label="Supplier">PT Setroom Indonesia</Descriptions.Item>
+                    <Descriptions.Item label="Supplier ID">{id}</Descriptions.Item>
                     <Descriptions.Item label="Status"><Tag color="green">Active</Tag></Descriptions.Item>
-                    <Descriptions.Item label="Address">Fatmawati Raya St, 33 – Jakarta Selatan</Descriptions.Item>
+                    <Descriptions.Item label="Address">Fatmawati Raya St, 33 - Jakarta Selatan</Descriptions.Item>
                     </Descriptions>
                 )
             },

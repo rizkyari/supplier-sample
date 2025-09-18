@@ -1,4 +1,4 @@
-import { Col, Tag, Row, Card, Statistic } from "antd";
+import { Col, Row, Card, Statistic } from "antd";
 
 function SupplierDashboard() {
     return (

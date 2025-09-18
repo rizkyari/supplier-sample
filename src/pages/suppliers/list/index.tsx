@@ -79,13 +79,12 @@ function SupplierListPage() {
         onChangeStatus={setStatus}
         onChangeView={setView}
         onExport={() => console.log("export…")}
-        onCreate={() => console.log("create new supplier…")}
         />
 
         {view === "table" && (
             <Table rowKey="key" columns={columns} dataSource={data} pagination={{ pageSize: 10 }} scroll={{ x: 720 }}/>
         )}
-        {view === "grid" && <div>/* TODO: Grid view card layout */</div>}
+        {view === "grid" && <div>TODO: Grid view card layout</div>}
         <NewSupplierModal
         open={openNew}
         onCancel={() => setOpenNew(false)}

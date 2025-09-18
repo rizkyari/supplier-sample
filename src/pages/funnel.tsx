@@ -1,7 +1,9 @@
 import Wip from '@/components/Wip'
 
-export default function FunnelPage() {
+function FunnelPage() {
   return <Wip title="Funnel Management" subtitle="On progress." />;
 }
 
-(FunnelPage as any).layoutProps = { title: "Funnel Management" };
+FunnelPage.layoutProps = { title: "Funnel Management" };
+
+export default FunnelPage;

@@ -10,10 +10,12 @@ import {
     message,
     Row,
     Col,
+    Image
 } from "antd";
 import { LoadingOutlined, PlusOutlined } from "@ant-design/icons";
 import type { UploadProps } from "antd";
 import type { RcFile } from "rc-upload/lib/interface";
+// import Image from "next/image";
 
 export interface NewSupplierValues {
     supplierName: string;
@@ -63,10 +65,11 @@ export default function NewSupplierModal({
             setImageUrl(url);
             form.setFieldsValue({ logoBase64: url });
             setUploadLoading(false);
-            onSuccess?.("ok" as any);
-        } catch (e) {
+            onSuccess?.("ok");
+        } catch (e: unknown) {
             setUploadLoading(false);
-            onError?.(new Error("Upload failed"));
+            const err = e instanceof Error ? e : new Error(String(e));
+            onError?.(err);
         }
     };
 
@@ -124,7 +127,7 @@ export default function NewSupplierModal({
                       customRequest={customRequest}
                     >
                         {imageUrl ? (
-                            <img
+                            <Image
                             src={imageUrl}
                             alt="logo"
                             draggable={false}
